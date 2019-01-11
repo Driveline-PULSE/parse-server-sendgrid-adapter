@@ -30,11 +30,11 @@ let SimpleSendGridAdapter = mailOptions => {
     const locale = options.locale;
 
     var subject = "Password Reset Request for " + appName;
-    var text = "You requested to reset your password for " + appName +". Click here to reset it: " + link;
+    var text = "Hi,\n\nYou requested to reset your password for " + appName +". \n\nClick here to reset it: \n" + link;
 
     if (locale.includes("ja")) {
       subject = "motusTHROWのパスワードリセット要求";
-      text = "motusTHROWのパスワードを再設定するよう要求しました。 リセットするにはここをクリックしてください：" + link;
+      text = "もしもし！\n\nmotusTHROWのパスワードを再設定するよう要求しました。 \n\nリセットするにはここをクリックしてください：\n" + link;
     }
 
     return new Promise(function (resolve, reject) {
